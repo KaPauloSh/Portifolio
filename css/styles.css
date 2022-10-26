@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("/images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #fff;
+}
+
+header .logo{
+    width: 10%;
+}
+
+li, a, button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.9s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: rgba(0, 136, 169, 0.5);
+}
+
+button{
+    padding: 9px 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.9s ease 0s;
+    background-color: rgba(0, 136, 169, 1);
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    font-size: 200%;
+    color: #fff;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 150%;
+    margin-top: 1%;
+    color: #fff;
+}
+
+.profile-ft{
+    margin-top: 1%;
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.9s ease 0s;
+    animation-name: profile-ft;
+    animation-duration: 4s;
+}
+
+@keyframes profile-ft{
+    0%{opacity: 0.6;
+        filter: blur(4px);}
+    100%{opacity: 1;
+        filter: none;}
+}
+.profile-ft:hover{
+    transition: all 0.9s ease 0s;
+    
+}
+
+#sobre{
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.container > h3{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.fixoNoTopo{
+    position: fixed;
+    top: 0px;
+}
+
+.fixoNoTopo + .principal{
+    padding-top: 60px;
+}
+
+/*navbar se mover*/
+header{
+    position: sticky;
+    top: 0;
+  }
+
+/*navbar mudar de cor ao rolar scroll*/
+header.ativo{
+    background-color: #000;
+}
+
+.flex-row2{
+    
+    background-color: #000;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.image2, .text2{
+    padding-right: 2%;
+    display: inline-block;
+}
+
+.image2{
+    vertical-align: middle;
+     
+}
+
+@media only screen and (min-width: 480px) {
+    .profile-ft {
+        width:30%;
+        height:auto;
+    }
+    }
+    @media only screen and (max-width: 479px) {
+    .profile-ft {
+        width:50%;
+        margin:0px auto;
+        display:block;
+        height:auto;
+    }
+    .img2{
+        width:100%;
+        margin:0px auto;
+        display:block;
+        height:auto;
+    }
+    .flex-row2{
+        flex-wrap: wrap;
+        
+    }
+    .text2{
+        margin-left: 5%;
+    }
+    }
+
+.parallax{
+    background-attachment: fixed;
+}
