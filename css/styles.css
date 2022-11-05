@@ -140,6 +140,7 @@ button:hover{
 header{
     position: sticky;
     top: 0;
+    z-index: 999;
   }
 
 /*navbar mudar de cor ao rolar scroll*/
@@ -166,13 +167,35 @@ header.ativo{
      
 }
 
-@media only screen and (min-width: 480px) {
+    /*pc*/
+    @media only screen and (min-width: 480px) {
     .profile-ft {
         width:30%;
         height:auto;
     }
+    #burguer{
+        display: none;
     }
+    }
+    /*mobile*/
     @media only screen and (max-width: 479px) {
+    
+    /*navbar*/
+    .nav__links{
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header{
+        display: flex;
+        align-items: center;
+    }
+    header li{
+        margin-top: 5%;
+        padding: 10px;
+        background-color: azure;
+    }
+
     .profile-ft {
         width:50%;
         margin:0px auto;
@@ -192,8 +215,20 @@ header.ativo{
     .text2{
         margin-left: 5%;
     }
+    .logo{
+
+    }
     }
 
 .parallax{
     background-attachment: fixed;
+}
+
+#burguer{
+    margin-right: 6%;
+    text-align: center;
+    display: block;
+}
+#burguer:hover{
+    color: aqua;
 }
