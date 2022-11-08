@@ -16,7 +16,8 @@ body{
 }
 
 header .logo{
-    width: 10%;
+    width: 30%;
+    
 }
 
 li, a, button{
@@ -28,12 +29,74 @@ li, a, button{
 }
 
 header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
+    /*navbar se mover*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
+/*navbar mudar de cor ao rolar scroll*/
+header.ativo{
+    background-color: #000;
+}
+
+.navbar{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.hamburguer{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    display: none;
+}
+.hamburguer::after{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    border-radius: 5px;
+}
+.hamburguer::before{
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.menu li a:hover{
+    color: #DCDCDC;
+}
 .logo{
     cursor: pointer;
 }
@@ -136,17 +199,6 @@ button:hover{
     padding-top: 60px;
 }
 
-/*navbar se mover*/
-header{
-    position: sticky;
-    top: 0;
-  }
-
-/*navbar mudar de cor ao rolar scroll*/
-header.ativo{
-    background-color: #000;
-}
-
 .flex-row2{
     
     background-color: #000;
@@ -166,32 +218,74 @@ header.ativo{
      
 }
 
-@media only screen and (min-width: 480px) {
-    .profile-ft {
-        width:30%;
-        height:auto;
-    }
-    }
-    @media only screen and (max-width: 479px) {
-    .profile-ft {
-        width:50%;
-        margin:0px auto;
-        display:block;
-        height:auto;
-    }
-    .img2{
-        width:100%;
-        margin:0px auto;
-        display:block;
-        height:auto;
-    }
-    .flex-row2{
-        flex-wrap: wrap;
+    @media screen and (max-width: 980px){
+        .hamburguer{
+            display: block;
+            z-index: 999;
+        }
+        .menu{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            padding: 100px 20px;
+            width: 100%;
+            max-width: 250px;
+
+            height: 100vh;
+            background-color: #222;
+            margin: 0;
+            flex-direction: column;
+            transition: 0.5s ease;
+        }
+        .menu.active{
+            right: 0;
+        }
         
     }
-    .text2{
-        margin-left: 5%;
+    /*pc*/
+    @media only screen and (min-width: 480px) {
+        .profile-ft {
+            width:30%;
+            height:auto;
+        }
     }
+    /*mobile*/
+    @media only screen and (max-width: 479px) {
+        
+        /*navbar*/
+        .nav__links{
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header{
+            display: flex;
+            align-items: center;
+        }
+        header li{
+            margin-top: 5%;
+            padding: 10px;
+        }
+
+        .profile-ft {
+            width:50%;
+            margin:0px auto;
+            display:block;
+            height:auto;
+        }
+        .img2{
+            width:100%;
+            margin:0px auto;
+            display:block;
+            height:auto;
+        }
+        .flex-row2{
+            flex-wrap: wrap;
+            
+        }
+        .text2{
+            margin-left: 5%;
+        }
     }
 
 .parallax{

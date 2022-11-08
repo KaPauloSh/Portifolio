@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio do Paulo"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Portifólio</title>
+    <title>Portfólio</title>
 </head>
 <body>
     
         <header>
             
-            <img class="logo"src="images/logo-night.png" alt="logo">
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#">Conhecimento</a></li>
-                    <li><a href="#">Portfólio</a></li>
-                    <li><a href="#">Contato</a></li>
+            <div class="navbar">
+                <div><img class="logo" src="images/logo-night.png" alt="logo"></div>
+                <div class="hamburguer active">☰</div>
+                <ul class="menu">
+                    <li><a href="#" class="nav__items">Home</a></li>
+                    <li><a href="#sobre" class="nav__items">Sobre</a></li>
+                    <li><a href="#" class="nav__items">Conhecimento</a></li>
+                    <li><a href="#" class="nav__items">Portfólio</a></li>
+                    <li><a href="#" class="nav__items">Contato</a></li>
                 </ul>
-            </nav>
-
+            </div>
+            
         </header>
         <main>
         
@@ -32,7 +35,7 @@
                 <div class="subtitulo rellax" data-rellax-speed="4"><h2>Desenvolvedor full stack</h2></div>
             </div>
             <div>
-                <img src="images/profile.png" alt="Foto de perfil" width="30%" class="profile-ft" >
+                <img src="images/profile.png" alt="Foto de perfil" width="30%" class="profile-ft rellax" data-rellax-speed="0">
             </div>
 
         
@@ -57,6 +60,7 @@
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>

@@ -20,4 +20,12 @@ activedScroll = () => {
     menu.classList.toggle('ativo', scrollY > 0);
 }
 
-window.addEventListener('scroll', activedScroll)
+window.addEventListener('scroll', activedScroll);
+
+//hamburguer
+$(document).ready(function(){
+    $('.hamburguer').click(function(){
+        $(this).toggleClass('active');
+        $(".menu").toggleClass('active');
+    });
+});
