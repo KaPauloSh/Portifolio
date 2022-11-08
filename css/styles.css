@@ -13,6 +13,8 @@ body{
     background-repeat: no-repeat;
     background-color: #000;
     color: #fff;
+    background-size: 100%;
+    
 }
 
 header .logo{
@@ -215,9 +217,10 @@ button:hover{
 
 .image2{
     vertical-align: middle;
+    margin: 0 auto;
+    padding: 0;
      
 }
-
     @media screen and (max-width: 980px){
         .hamburguer{
             display: block;
@@ -240,6 +243,9 @@ button:hover{
         .menu.active{
             right: 0;
         }
+        .text2{
+            padding-left: 10px;
+        }
         
     }
     /*pc*/
@@ -247,6 +253,10 @@ button:hover{
         .profile-ft {
             width:30%;
             height:auto;
+        }
+        body{
+            background-size: cover;
+            height: 100%;
         }
     }
     /*mobile*/
@@ -285,6 +295,9 @@ button:hover{
         }
         .text2{
             margin-left: 5%;
+        }
+        body{
+            background-size: 200%;
         }
     }
 
