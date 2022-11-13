@@ -51,18 +51,131 @@ header.ativo{
     background-color: #000;
 }
 
-.service{
-    border: 5px black double;
-    width: 200px;
+.skill{
+    border: 5px #fff outset;
+    width: 150px;
     height: 200px;
-    background-color: blue;
+    background-color: #DCDCDC;
+    justify-content: space-around;
+    margin: 25px;
+    padding: 0 auto;
+    color: #191970;
+    border-radius: 15px; 
+}
+.skill:hover{
+    border: inset;
+    background-color: #D3D3D3;
+}
+.skill img{
+    margin: auto;
+    width: 100px;
+}
+
+.skill h3{
+    text-align: center;
+}
+/*
+
+.contatos{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    padding-top: 25px;
+}
+.contatos li{
+    display: block;
+}
+*/
+.contatos{
+    justify-content: center;
+}
+.contatos div{
+    margin: 40px;
     justify-content: space-between;
-    margin: 20px;
+}
+.contatos img{
+    display: block;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: double #000;
+    cursor: pointer;
+}
+.contatos img:hover{
+    width: 54px;
+    transition: all 0.4s ease 0s;
+}
+.gmail{
+    padding-top: 15px;
+    text-align: center;
+    display: none;
+}
+.copy{
+
+    text-align: center;
+    padding: 50px;
+}
+
+form{
+    text-align: center;
+}
+
+#nome, #telefone, #email, #assunto{
+    width: 350px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#mensagem{
+    width: 350px;
+    height: 100px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.botao{
+    width: 350px;
+    height: 50px;
+    border-radius: 15px;
+    background-image: linear-gradient(#008000, #32CD32);
+    color: #fff;
+}
+#nome::placeholder, #telefone::placeholder, #email::placeholder, #assunto::placeholder, #mensagem::placeholder{
+    font-weight: bold;
+    opacity: .5;
+    color: #1E90FF;
+}
+
+
+.footer-box{
+    width: 100%;
+}
+.footer-box img{
+    margin: auto;
+    display: block;
 }
 .text2{
     padding-left: 10px;
 }
 
+.projetos{
+    align-items: center;
+    justify-content: space-around;
+}
+.projeto{
+    width: 100%;
+    transition: all 0.9s ease 0s;
+    width: 600px;
+    height: 300px;
+    border-radius: 15px;
+    border: double #DCDCDC 2px;
+}
+.projeto:hover{
+    filter: blur(2px);
+    width: 605px;
+}
 .navbar{
     max-width: 1200px;
     margin: 0 auto;
@@ -70,6 +183,7 @@ header.ativo{
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    transition: 0.5s ease;
     
 }
 .hamburguer{
@@ -104,6 +218,7 @@ header.ativo{
     list-style: none;
     display: flex;
     align-items: center;
+    
 }
 .menu li{
     margin-left: 10px;
@@ -155,6 +270,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 .flex-column{
@@ -201,6 +317,13 @@ button:hover{
     
 }
 
+.tags{
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+/*
 #sobre{
     padding-top: 5%;
     padding-left: 2%;
@@ -208,13 +331,19 @@ button:hover{
     text-align: center;
 }
 
-#servicos{
+#skills{
     padding-top: 5%;
     padding-left: 2%;
     padding-bottom: 2%;
     text-align: center;
 }
-
+#projetos{
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+*/
 .container > h3{
     margin-left: 2%;
     margin-right: 2%;
@@ -288,7 +417,20 @@ button:hover{
     }
     /*mobile*/
     @media only screen and (max-width: 479px) {
-        
+        .contatos{
+            flex-direction: column;
+        }
+        .contatos div{
+            padding-top: 2px;
+        }
+
+        .projeto{
+            width: 400px;
+            max-width: 600px;
+        }
+        .projeto:hover{
+            width: 405px;
+        }
         .image2{
             display: none;
         }
@@ -328,6 +470,9 @@ button:hover{
         }
         body{
             background-size: 200%;
+        }
+        .profile-ft{
+            margin-bottom: 40px;
         }
     }
 
