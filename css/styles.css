@@ -8,19 +8,20 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
+.bg{
     background-image: url("../images/bg1.jpg");
     background-repeat: no-repeat;
-    
+    background-size: 100%;
+}
+body{
     background-color: #000;
     color: #fff;
-    background-size: 100%;
+    
     
 }
 
 header .logo{
     width: 30%;
-    
 }
 
 li, a, button{
@@ -75,19 +76,6 @@ header.ativo{
 .skill h3{
     text-align: center;
 }
-/*
-
-.contatos{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    list-style: none;
-    padding-top: 25px;
-}
-.contatos li{
-    display: block;
-}
-*/
 .contatos{
     justify-content: center;
 }
@@ -164,7 +152,7 @@ form ul{
 
 fieldset{
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 400px;
     margin: auto;
     padding: 15px;
 }
@@ -205,6 +193,13 @@ fieldset{
     transition: 0.5s ease;
     
 }
+.hero{
+    padding-top: 0;
+    border-top: 0;
+    margin-top: -70px;
+    width: 100%;
+    z-index: 0;
+}
 .hamburguer{
     width: 30px;
     height: 30px;
@@ -237,6 +232,7 @@ fieldset{
     list-style: none;
     display: flex;
     align-items: center;
+    
     
 }
 .menu li{
@@ -306,12 +302,27 @@ button:hover{
     font-size: 200%;
     color: #fff;
 }
+.titulo h1{
+    color: #DAA520;
+      text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,                    
+                1px -1px 0px #000,                  
+                1px 0px 0px #000;
+}
 
 .subtitulo{
     text-align: center;
     font-size: 150%;
     margin-top: 1%;
     color: #fff;
+}
+.subtitulo h2{
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,                    
+                1px -1px 0px #363636,                  
+                1px 0px 0px #363636;
 }
 
 .profile-ft{
@@ -342,27 +353,6 @@ button:hover{
     padding-bottom: 2%;
     text-align: center;
 }
-/*
-#sobre{
-    padding-top: 5%;
-    padding-left: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-}
-
-#skills{
-    padding-top: 5%;
-    padding-left: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-}
-#projetos{
-    padding-top: 5%;
-    padding-left: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-}
-*/
 .container > h3{
     margin-left: 2%;
     margin-right: 2%;
@@ -423,37 +413,120 @@ button:hover{
         }
         
     }
-    /*pc*/
-    @media only screen and (min-width: 480px) {
-        .profile-ft {
-            width:30%;
-            height:auto;
+    /*tv*/
+    @media only screen and (min-width: 1201px){
+        .titulo{
+            margin-top: -550px;
         }
-        body{
-            background-size: cover;
-            height: 100%;
+        .subtitulo{
+            margin-top: -460px;
+        }
+        /*
+            .profile-ft {
+                width:30%;
+                height:auto;
+            }
+            body{
+                background-size: cover;
+                height: auto;
+            }
+        */
+    }
+    /*desktop*/
+    @media only screen and (max-width: 1200px) and (min-width: 1025px){
+        .titulo{
+            margin-top: -550px;
+        }
+        .subtitulo{
+            margin-top: -400px;
+        }
+        .hero{
+            height: 650px
+        }
+    }
+    /*laptop*/
+    @media only screen and (max-width: 1024px) and (min-width: 769px){
+        .titulo{
+            margin-top: -420px;
+        }
+        .subtitulo{
+            margin-top: -320px;
+        }
+        .image2 img{
+            width: 250px;
+        }
+        .hero{
+            height: 520px
+        }
+    }
+    /*tablet*/
+    @media only screen and (max-width: 768px) and (min-width: 480px){
+        .titulo{
+            margin-top: -450px;
+        }
+        .subtitulo{
+            margin-top: -350px;
+        }
+        .hero{
+            height: 500px
+        }
+        .image2{
+            display: none;
         }
     }
     /*mobile*/
-    @media only screen and (max-width: 479px) {
+    @media only screen and (max-width: 479px){
+        .titulo{
+            font-size: 22px;
+            margin-top: -430px;
+        }
+        .subtitulo{
+            font-size: 15px;
+            margin-top: -340px;
+        }
+        .hero{
+            height: 600px
+        }
+        #nome, #email, #assunto{
+            width: 300px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        #mensagem{
+            width: 300px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .botao{
+            width: 300px;
+            height: 50px;
+        }
+        
+        fieldset{
+            border: none;
+        }
         .skill{
-            width: 140px;
+            justify-content: space-between;
+            width: 150px;
             height: 190px;
             margin: 10px;
         }
         .contatos{
-            flex-direction: column;
+            flex-direction: row;
         }
         .contatos div{
-            padding-top: 2px;
+            justify-content:space-around;
+            margin: 10px;
+            padding: 0;
         }
 
         .projeto{
-            width: 340px;
+            width: 300px;
+            height: 200px;
             max-width: 600px;
         }
         .projeto:hover{
-            width: 345px;
+            width: 305px;
         }
         .image2{
             display: none;
@@ -467,6 +540,7 @@ button:hover{
         header{
             display: flex;
             align-items: center;
+            
         }
         header li{
             margin-top: 5%;
@@ -494,12 +568,12 @@ button:hover{
         }
         body{
             background-size: 200%;
+            padding: 0;
+            
         }
         .profile-ft{
             margin-bottom: 40px;
         }
     }
 
-.parallax{
-    background-attachment: fixed;
-}
+
