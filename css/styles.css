@@ -436,6 +436,11 @@ button:hover{
     }
     /*mobile*/
     @media only screen and (max-width: 479px) {
+        .skill{
+            width: 140px;
+            height: 190px;
+            margin: 10px;
+        }
         .contatos{
             flex-direction: column;
         }
@@ -444,7 +449,7 @@ button:hover{
         }
 
         .projeto{
-            width: 360px;
+            width: 340px;
             max-width: 600px;
         }
         .projeto:hover{
