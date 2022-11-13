@@ -31,3 +31,8 @@ $(document).ready(function(){
 });
 
 //Formulário
+
+//validador
+validador = () => {
+    
+}
