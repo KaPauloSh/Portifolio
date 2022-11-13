@@ -34,5 +34,28 @@ $(document).ready(function(){
 
 //validador
 validador = () => {
-    
+    //validar nome
+    if(document.dados.name.value == "" || document.dados.name.value.length < 3){
+        alert("preencha o campo nome corretamente!");
+        document.dados.name.focus();
+        return false;
+    }
+    //validar email
+    if(document.dados.email.value == "" || document.dados.email.value.indexOf('@') == -1 || document.dados.email.value.indexOf('.') == -1){
+        alert("preencha o campo com um email válido!");
+        document.dados.email.focus();
+        return false;
+    }
+    //validar assunto
+    if(document.dados.subject.value == "" || document.dados.subject.value.length < 3){
+        alert("preencha o campo assunto!");
+        document.dados.subject.focus();
+        return false;
+    }
+    //validar mensagem
+    if(document.dados.message.value == ""){
+        alert("preencha o campo mensagem!");
+        document.dados.message.focus();
+        return false;
+    }
 }
