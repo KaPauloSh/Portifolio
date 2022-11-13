@@ -121,7 +121,7 @@ form{
     text-align: center;
 }
 
-#nome, #telefone, #email, #assunto{
+#nome, #email, #assunto{
     width: 350px;
     height: 50px;
     border-radius: 15px;
