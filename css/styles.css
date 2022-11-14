@@ -416,25 +416,15 @@ button:hover{
     /*tv*/
     @media only screen and (min-width: 1201px){
         .titulo{
-            margin-top: -550px;
+            margin-top: -590px;
         }
         .subtitulo{
-            margin-top: -460px;
+            margin-top: -490px;
         }
         .profile-ft{
-            margin-top: 25px;
+            margin-top: 45px;
             margin-bottom: 40px;
         }
-        /*
-            .profile-ft {
-                width:30%;
-                height:auto;
-            }
-            body{
-                background-size: cover;
-                height: auto;
-            }
-        */
     }
     /*desktop*/
     @media only screen and (max-width: 1200px) and (min-width: 1025px){
@@ -448,17 +438,17 @@ button:hover{
             height: 650px
         }
         .profile-ft{
-            margin-top: 25px;
+            margin-top: 45px;
             margin-bottom: 40px;
         }
     }
     /*laptop*/
     @media only screen and (max-width: 1024px) and (min-width: 769px){
         .titulo{
-            margin-top: -420px;
+            margin-top: -500px;
         }
         .subtitulo{
-            margin-top: -320px;
+            margin-top: -400px;
         }
         .image2 img{
             width: 250px;
@@ -467,7 +457,7 @@ button:hover{
             height: 600px
         }
         .profile-ft{
-            margin-top: 25px;
+            margin-top: 45px;
             margin-bottom: 40px;
         }
     }
@@ -486,7 +476,7 @@ button:hover{
             display: none;
         }
         .profile-ft{
-            margin-top: 25px;
+            margin-top: 45px;
             margin-bottom: 40px;
         }
     }
@@ -498,7 +488,7 @@ button:hover{
         }
         .subtitulo{
             font-size: 15px;
-            margin-top: -340px;
+            margin-top: -360px;
         }
         .hero{
             height: 550px
@@ -588,7 +578,7 @@ button:hover{
             
         }
         .profile-ft{
-            margin-top: 25px;
+            margin-top: 45px;
             margin-bottom: 40px;
         }
     }
