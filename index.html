@@ -27,7 +27,7 @@
     <header>
         <!--Navbar start-->
         <div class="navbar">
-            <div><img class="logo" src="images/logo-night.png" alt="logo"></div>
+            <div><a href="#"><img class="logo" src="images/logo-night.png" alt="logo"></a></div>
             <div class="hamburguer active">☰</div>
             <nav>
                 <ul class="menu">
@@ -154,14 +154,23 @@
                 <div><a href="https://wa.me/message/PGJI2LKJE3G6G1"><img src="images/contatos/whatsapp.png"></a></div>
                 <div><a href="https://www.linkedin.com/in/paulo-da-silva-barbosa-0456811b6/"><img src="images//contatos/linkedin.png"></a></div>
                 <div><a href="https://github.com/KaPauloSh"><img src="images//contatos/github.png"></a></div>
-                <div><img src="images//contatos/gmail.png"></div>
-                <div class="gmail"><p>kashpaulo@gmail.com</p></div>
+                <div><img src="images//contatos/gmail.png" onclick="return mudarEstado('.gmail')"></div>
             </div>
             <!--Redes sociais end-->
 
             <!--Formulário start-->
             <div>
-                <form action="https://api.staticforms.xyz/submit" method="POST" id="form-contato" target="_blank" name="dados" onsubmit="return validador()">
+                <div class="gmail" id="gmailTexto">
+                    <p>
+                        kashpaulo@gmail.com
+                    </p>
+                    <!--Copiar o gmail start-->
+                    <a>
+                        <span class="material-symbols-outlined" id="copiarTexto" onclick="return copiarTexto('kashpaulo@gmail.com')">content_copy</span>
+                    </a>
+                    <!--Copiar o gmail end-->
+                </div>
+                <form action="https://api.staticforms.xyz/submit" method="POST" id="form-contato" target="_self" name="dados" onsubmit="return validador()">
                     <fieldset>
                         <legend><h2>Entre em contato</h2></legend>
                         <ul>
@@ -182,7 +191,10 @@
                                 <textarea placeholder="*Mensagem" id="mensagem" name="message"></textarea>
                             </li>
                             <li>
-                                <input type="submit" value="Enviar" class="botao">
+                                <button value="Enviar" class="botao">
+                                    <span class="material-symbols-outlined">mail</span>
+                                    Enviar
+                                </button>
                             </li>
                         </ul>
                     </fieldset>
@@ -195,6 +207,21 @@
                 <p class="copy">&copy; Copyright 2022 by Paulo da Silva Barbosa. Todos os direitos reservados.</p>
             </div>
             <!--Copyright end-->
+
+            <!--Voltar ao início start-->
+            <div class="voltarAoInicio">
+                <a href="#">
+                    
+                    <p>
+                        <span class="material-symbols-outlined">arrow_upward</span>
+                        <span class="material-symbols-outlined">arrow_upward</span>
+                        Voltar ao início 
+                        <span class="material-symbols-outlined">arrow_upward</span>
+                        <span class="material-symbols-outlined">arrow_upward</span>
+                    </p>
+                </a>
+            </div>
+            <!--Voltar ao início end-->
         </div>
 
     </footer>

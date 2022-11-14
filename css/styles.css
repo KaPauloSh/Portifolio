@@ -20,6 +20,9 @@ body{
     
 }
 
+legend{
+    user-select: none;
+}
 header .logo{
     width: 30%;
 }
@@ -53,6 +56,15 @@ header.ativo{
     background-color: #000;
 }
 
+.voltarAoInicio a{
+    color: #fff;
+    text-align: center;
+    margin: 30px;
+    font-size: 20px;
+}
+.voltarAoInicio a:hover{
+    color: #DAA520;
+}
 .skill{
     border: 5px #fff outset;
     width: 150px;
@@ -63,6 +75,7 @@ header.ativo{
     padding: 0 auto;
     color: #191970;
     border-radius: 15px; 
+    user-select: none;
 }
 .skill:hover{
     border: inset;
@@ -96,12 +109,24 @@ header.ativo{
     transition: all 0.4s ease 0s;
 }
 .gmail{
-    padding-top: 15px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
     display: none;
 }
+.gmail p{
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 200px;
+}
+#copiarTexto{
+    cursor: pointer;
+    user-select: none;
+}
 .copy{
-
+    user-select: none;
     text-align: center;
     padding: 50px;
 }
@@ -135,6 +160,7 @@ form ul{
     color: #fff;
     border: outset 4px #32CD32;
     transition: all 0.6s ease 0s;
+    cursor: pointer;
 }
 .botao:hover{
     background-image: linear-gradient(	#32CD32, #006400);
@@ -304,11 +330,19 @@ button:hover{
 }
 .titulo h1{
     color: #DAA520;
-      text-shadow: 
+    text-shadow: 
                -1px -1px 0px #000, 
                -1px 1px 0px #000,                    
                 1px -1px 0px #000,                  
                 1px 0px 0px #000;
+}
+.titulo h1:hover{
+    color: #FFD700;
+    text-shadow: 
+               -1px -1px 0px 	#1C1C1C, 
+               -1px 1px 0px 	#1C1C1C,                    
+                1px -1px 0px 	#1C1C1C,                  
+                1px 0px 0px 	#808000;
 }
 
 .subtitulo{
@@ -320,6 +354,13 @@ button:hover{
 .subtitulo h2{
     text-shadow: 
                -1px -1px 0px #000, 
+               -1px 1px 0px #000,                    
+                1px -1px 0px #363636,                  
+                1px 0px 0px #363636;
+}
+.subtitulo h2:hover{
+    text-shadow: 
+               -1px -1px 0px #fff, 
                -1px 1px 0px #000,                    
                 1px -1px 0px #363636,                  
                 1px 0px 0px #363636;
@@ -352,6 +393,7 @@ button:hover{
     padding-left: 2%;
     padding-bottom: 2%;
     text-align: center;
+    user-select: none;
 }
 .container > h3{
     margin-left: 2%;

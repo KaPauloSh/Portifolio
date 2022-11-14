@@ -36,26 +36,59 @@ $(document).ready(function(){
 validador = () => {
     //validar nome
     if(document.dados.name.value == "" || document.dados.name.value.length < 3){
-        alert("preencha o campo nome corretamente!");
+        alert("Preencha o campo nome corretamente!");
         document.dados.name.focus();
         return false;
     }
     //validar email
     if(document.dados.email.value == "" || document.dados.email.value.indexOf('@') == -1 || document.dados.email.value.indexOf('.') == -1){
-        alert("preencha o campo com um email válido!");
+        alert("Preencha o campo com um email válido!");
         document.dados.email.focus();
         return false;
     }
     //validar assunto
     if(document.dados.subject.value == "" || document.dados.subject.value.length < 3){
-        alert("preencha o campo assunto!");
+        alert("Preencha o campo assunto!");
         document.dados.subject.focus();
         return false;
     }
     //validar mensagem
     if(document.dados.message.value == ""){
-        alert("preencha o campo mensagem!");
+        alert("Preencha o campo mensagem!");
         document.dados.message.focus();
         return false;
     }
+    else{
+        alert("Mensagem enviada com sucesso!");
+    }
+}
+
+//pegar o email e por numa variável
+const div = document.querySelector('.gmail');
+//aparecer o gmail
+div.style.display = 'none';
+//função de mudar de estado
+mudarEstado = (item) => {
+    //pegar o valor do display do gmail
+    var display = document.querySelector(item).style.display;
+
+    switch (display) {
+        case 'none' || 'null':
+            
+            div.style.display = 'flex'; 
+            break;
+        case 'flex':
+            div.style.display = 'none'; 
+            break;
+        default:
+            div.style.display = 'none';
+    }
+}
+
+//copiar o texto para área de transferência
+copiarTexto = (texto) => {
+    navigator.clipboard.writeText(texto);
+    navigator.clipboard.readText().then((texto) => {
+        alert(texto + " copiado para a área de transferência")
+    })
 }
