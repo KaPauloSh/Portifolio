@@ -72,6 +72,13 @@ header.ativo {
   flex-direction: row;
   justify-content: center;
   list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#start-skills-container li {
+  display: inline-block;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .start-skill {
@@ -111,6 +118,18 @@ header.ativo {
 
 .mongo-skill-img:hover {
   animation: pulse 1s infinite;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(-50%, -50%);
+  }
 }
 
 @keyframes spin {
